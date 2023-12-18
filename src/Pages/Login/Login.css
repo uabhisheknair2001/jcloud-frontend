@@ -1,0 +1,77 @@
+.loading-indicator {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.text-login {
+  color: rgb(73, 72, 72);
+  padding: 0 !important;
+  letter-spacing: 2px;
+  font-size: bold;
+  font-size: 1.8rem !important;
+}
+
+.success {
+  color: #4caf50;
+  font-size: 20px;
+}
+
+.error {
+  color: #ff5722;
+  font-size: 20px;
+}
+.forgot-password-link {
+  text-align: right;
+  font-size: 20px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  padding-bottom: 5px;
+}
+
+.login-btn {
+  width: 100%;
+  padding-left: 20px;
+  font-size: 25px !important;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  font-weight: bold;
+  background-color: #008b96;
+  transition: 0.3s ease-in-out;
+  color: white;
+  text-align: left;
+}
+.login-btn:hover {
+  color: white;
+  background-color: #00727a;
+}
+.signup {
+  text-align: right !important;
+  font-size: 1.2rem;
+}
+.allready-account {
+  font-size: 20px !important;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+@media (max-width: 600px) {
+  .login-container {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+.Login_box {
+  font-family: 'Cormorant', serif;
+  /* height: 98%; */
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.Login_box a {
+  float: right;
+}
+
+.Login_box label,
+.Login_box input {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

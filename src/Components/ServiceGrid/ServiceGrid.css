@@ -1,0 +1,91 @@
+.box {
+  height: 619px;
+  width: 1172px;
+  font-family: "Montserrat-Bold", Helvetica;
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+}
+
+.box .services-grid,
+.box .group,
+.box .overlap-group,
+.box .overlap-wrapper,
+.box .div,
+.box .construction,
+.box .ready-made-layout,
+.box .vastu-services,
+.box .text-wrapper-2,
+.box .group-2,
+.box .group-3,
+.box .div-wrapper,
+.box .text-wrapper-3,
+.box .group-4,
+.box .text-wrapper-4 {
+  position: absolute;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  width: 146px;
+  height: 191px;
+  top: 137px;
+  background: linear-gradient(180deg, rgb(39, 60, 102) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 29px;
+  z-index: 1;
+}
+
+.box .services-grid,
+.box .group,
+.box .group-2,
+.box .group-3,
+.box .group-4 {
+  width: 190px;
+  left: 0;
+}
+
+.box .text-wrapper {
+  font-size: 30px;
+  font-weight: 700;
+  left: 182px;
+  top: 42px;
+  z-index: 2;
+}
+
+.box .construction,
+.box .text-wrapper-2,
+.box .ready-made-layout,
+.box .vastu-services,
+.box .text-wrapper-3,
+.box .text-wrapper-4 {
+  left: 21px;
+}
+
+.box .construction {
+  font-size: 21px;
+  top: 60px;
+}
+
+.box .text-wrapper-2 {
+  top: 78px;
+}
+
+.box .ready-made-layout {
+  top: 67px;
+}
+
+.box .vastu-services {
+  top: 68px;
+}
+
+.box .text-wrapper-3 {
+  top: 71px;
+}
+
+.box .text-wrapper-4 {
+  left: 15px;
+  top: 85px;
+  white-space: nowrap;
+  width: 157px;
+}

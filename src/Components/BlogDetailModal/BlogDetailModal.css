@@ -1,0 +1,54 @@
+/* my style */
+.blog-modal {
+  font-family: 'Cormorant', serif;
+}
+.blog-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.blog-modal .card {
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.blog-title {
+  font-size: 26px !important;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: bold;
+}
+.blog-content-text {
+  margin-top: 2rem;
+  font-size: 19px;
+  line-height: 1.7rem !important;
+  word-spacing: 1.5px;
+  letter-spacing: 0.5px;
+  line-height: 25px;
+  font-weight: bold;
+}
+.read-content {
+  padding-left: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  cursor: pointer;
+  color: #f4c430;
+}
+@media (max-width: 574px) {
+  .blog-modal .card {
+    margin: 2rem 1rem;
+  }
+}
+@media (min-width: 723px) and (max-width: 1024px) {
+  .blog-modal .card {
+    margin: 2rem 1rem;
+  }
+}
+@media (min-width: 1025px) {
+  .blog-modal .card {
+    width: 40rem;
+    margin: 2rem auto;
+  }
+}

@@ -1,0 +1,18 @@
+.plancom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cormorant', serif;
+  /* background-color: blue; */
+}
+.planComparison h2 {
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-family: 'Cormorant', serif;
+  font-weight: 800;
+}
+.ReactCompareImage {
+  height: 400px !important;
+  width: 300px !important;
+}

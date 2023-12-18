@@ -1,0 +1,113 @@
+/* my style */
+.aboutus-con {
+  font-family: 'Cormorant', serif;
+  padding: 3rem 0;
+  font-size: bolder;
+}
+.aboutus-con .jcloudwork {
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  font-size: 3.5rem;
+  color: #05757d;
+}
+.aboutus-con .tagline {
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-size: 1.8rem;
+}
+.about-card {
+  width: 70rem;
+  display: block;
+  margin: 0 auto;
+}
+.aboutus-con .card {
+  height: 21rem;
+  width: 25rem;
+  transition: transform 0.3s;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.aboutus-con .card h2 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.aboutus-con .card p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.aboutus-con .card-body {
+  padding: 2rem;
+}
+.about-image {
+  height: 21rem;
+  width: 25rem;
+  border-radius: 15px;
+}
+.aboutus-con .card:hover {
+  transform: translateY(-5px);
+}
+.about-contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-contact h2 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.about-contact p {
+  text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-size: 1.3rem;
+  color: black;
+  font-weight: bold;
+  max-width: 30rem;
+  display: block;
+  margin: 0 auto;
+}
+.about-contact .cta-button {
+  width: 10rem;
+  display: block;
+  margin: 1rem auto;
+  background-color: #05757d !important;
+  color: white;
+  font-size: 1.5rem;
+}
+.about-contact .cta-button:hover,
+.about-contact .cta-button:active {
+  background-color: #23afaf !important;
+  color: white;
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+  .about-card {
+    width: 45rem;
+    display: block;
+    margin: 0 auto;
+  }
+  .aboutus-con .card {
+    width: 22rem;
+  }
+  .aboutus-con .card-body {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .about-card {
+    width: 20rem;
+    display: block;
+    margin: 0 auto;
+  }
+  .aboutus-con .card {
+    width: 22rem;
+  }
+  .aboutus-con .card-body {
+    padding: 1rem !important;
+  }
+}

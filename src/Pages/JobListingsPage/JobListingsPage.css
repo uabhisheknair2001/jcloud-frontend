@@ -1,0 +1,41 @@
+/* JobListingsPage.css */
+
+/* my style  */
+.job-listing {
+  padding: 3rem 0;
+  font-family: 'Cormorant', serif;
+}
+.job-listing h2 {
+  letter-spacing: 2px;
+  font-weight: bolder;
+  font-size: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+.job-listing h3 {
+  letter-spacing: 2px;
+  font-weight: bolder;
+  font-size: 2.2rem;
+}
+.job-listing p {
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  word-spacing: 2px;
+  color: black;
+}
+.job-listing button {
+  background-color: #05757d;
+  padding: 8px 20px;
+}
+.job-listing a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1.5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.job-listing button:hover,
+.job-listing button:active {
+  background-color: #23afaf;
+  color: white;
+}

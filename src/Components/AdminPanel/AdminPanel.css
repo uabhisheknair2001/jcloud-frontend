@@ -1,0 +1,70 @@
+/* AdminPanel.css */
+
+.admin-container {
+  display: flex;
+  font-family: 'Cormorant', serif;
+  background-color: #f8f9fa;
+  z-index: 99;
+  /* background-color: #73757b; */
+}
+.admin-container .container-fluid {
+  padding-left: 0 !important;
+}
+
+.welcome-message {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #73757b;
+  font-weight: bold;
+  padding: 4rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+/* my style */
+.admin-left-con {
+  font-family: 'Cormorant', serif;
+  width: 18rem;
+  background-color: #04595f;
+  /* background-color: #fcdbc8; */
+}
+.admin-left-con .nav-item a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  letter-spacing: 1.2px;
+
+  word-spacing: 2px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.admin-left-con .nav-item a:hover {
+  transition: ease-in-out 0.5s;
+}
+.admin-left-con .admin-logo {
+  width: 80px !important;
+  height: 70px;
+  /* background-color: #ccc; */
+  margin-bottom: 30px;
+  padding-top: 10px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+.admin-left-con .logout {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+}
+.admin-left-con .nav-item {
+  padding: 0 !important;
+  width: 20rem;
+  text-align: left !important;
+  padding: 0 !important;
+}
+.admin-right-box {
+  font-family: 'Cormorant', serif;
+  width: 60rem;
+  /* background-color: black; */
+}

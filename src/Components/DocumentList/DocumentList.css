@@ -1,0 +1,28 @@
+/* my style */
+/* .filter-com {
+  width: 20rem;
+  position: absolute;
+  top: 0;
+  padding: 0 !important;
+  background-color: black;
+} */
+.document_list {
+  display: flex;
+  align-items: flex-start !important;
+  position: relative;
+  top: 0;
+  z-index: 0;
+  font-family: 'Cormorant', serif;
+  font-weight: bold;
+}
+.documet_cardshow {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 0;
+}
+@media (min-width: 723px) and (max-width: 1025px) {
+  .documet-card {
+    padding-left: 10rem;
+  }
+}

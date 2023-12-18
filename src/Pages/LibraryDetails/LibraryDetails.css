@@ -1,0 +1,113 @@
+/* FeatureDetail.css */
+
+/* .feature-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.feature-detail-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.feature-detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-detail-image:hover {
+  transform: scale(1.1);
+}
+
+.feature-detail-link {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.feature-detail-link:hover {
+  background-color: #0056b3;
+} */
+/* my style */
+
+.feature-detail-con {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cormorant', serif;
+}
+.feature-detail-con h2 {
+  text-align: center;
+  padding-top: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  word-spacing: 1.5px;
+  font-size: 2rem;
+}
+.feature-detail-con .feature-con {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: black; */
+}
+.feature-con .card-header {
+  background-color: white;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-size: bold;
+}
+.feature-con .card {
+  width: 33rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 0;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.feature-con .card img {
+  width: 33rem;
+  height: 27rem;
+}
+.feature-detail-loading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00747c;
+}
+.feature-detail-not-found {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+}
+.feature-btn {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  background-color: #00747c;
+  color: white;
+  margin-top: 10px;
+}
+.feature-btn:hover,
+.feature-btn:active {
+  color: white;
+  background: #0598a2;
+}

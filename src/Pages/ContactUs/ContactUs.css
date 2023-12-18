@@ -1,0 +1,51 @@
+.contactUs-page {
+  margin: 3rem 0;
+  font-family: 'Cormorant', serif;
+}
+.contactUs-page h2 {
+  font-size: 2.3rem !important;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: black;
+}
+.contactUs-page .card {
+  margin: 1rem 0;
+  width: 23rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 0.2px solid #a2d9d9;
+}
+.contacticon-card {
+  height: 10rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact-icon {
+  border: 2px solid #00727a;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-content {
+  padding-left: 1rem;
+}
+.contact-content h3 {
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  word-spacing: 1.5px;
+}
+.contact-content p {
+  max-width: 16rem;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-size: 1.3rem;
+  margin-bottom: 0rem !important;
+}

@@ -1,0 +1,187 @@
+Add to your existing styles.css .course-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* DocumentForm.css */
+.form-container {
+  /* max-width: 100%; Adjusted width */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+/* 
+.custom-select {
+  position: relative;
+  width: 100%;
+} */
+/* 
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.select-selected {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  text-align: center;
+  border-left: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.select-items {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow-y: auto;
+  top: 100%;
+  right: 0;
+  left: 0;
+  max-height: 150px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+/* .select-items div {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #333;
+}
+
+.select-items div:hover {
+  background-color: #f2f2f2;
+}
+
+.form-button {
+  margin-top: 20px;
+  text-align: center;
+} */
+
+.course-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.course-form button {
+  padding: 12px 24px;
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.course-form button:hover {
+  background-color: #0056b3;
+}
+.course-form {
+  width: 50rem;
+  margin: 2rem auto;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.course-form h2 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  word-spacing: 2px;
+}
+.course-form label {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.course-form input,
+.course-form select,
+.course-form textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  resize: none;
+}
+
+.course-form button {
+  background-color: #008b96;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 25px !important;
+  cursor: pointer;
+  width: 8rem;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+  border-radius: 4px;
+}
+
+.course-form button:hover {
+  color: white;
+  background-color: #00727a;
+}

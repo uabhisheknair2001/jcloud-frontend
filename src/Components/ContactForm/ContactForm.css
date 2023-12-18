@@ -1,0 +1,108 @@
+.contact {
+  font-family: 'Cormorant', serif;
+}
+.contact label {
+  display: block;
+  margin: 0 !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+}
+.contact .card-header {
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
+  background-color: #fff;
+}
+.contact input {
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+}
+.phone-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.phone-select-box {
+  padding: 10px 0;
+  margin-bottom: 9px;
+}
+.phone-input-box {
+  width: 22rem;
+}
+.phone-input input {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-left: 5px;
+  color: #000;
+}
+.phone-select {
+  height: 50px;
+}
+.inquiry select {
+  color: #000;
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+.contact input[type='text'],
+.contact input[type='email'],
+.contact textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  color: #000;
+}
+.form-group {
+  margin: 0 !important;
+}
+textarea {
+  resize: vertical;
+}
+.contact .card-header h3 {
+  font-size: 1.9rem !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: black;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.contact .card {
+  width: 35rem !important;
+  display: block;
+  color: #000;
+  margin: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.submit-button {
+  display: block;
+  width: 100%;
+  background-color: #008b96;
+  color: #fff;
+  border: none;
+  font-size: 1.7rem !important;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem !important;
+  text-align: center !important;
+}
+.contact-text {
+  text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-size: 20px;
+  padding: 0.5rem 0 0 0;
+}
+.contact textarea {
+  resize: none;
+}
+.submit-button:hover {
+  background-color: #00727a;
+}
+.button {
+  margin: 0 !important;
+}

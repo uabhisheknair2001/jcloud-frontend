@@ -1,0 +1,30 @@
+.features-grids {
+  font-family: 'Cormorant', serif;
+}
+
+.features-grids .card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: transform 0.3s ease-in-out;
+}
+.features-grids .card:hover {
+  transform: scale(1.05);
+}
+
+.features-grids a {
+  text-decoration: none;
+}
+.features-grids h2 {
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+.featurescard h3 {
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding-top: 10px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
