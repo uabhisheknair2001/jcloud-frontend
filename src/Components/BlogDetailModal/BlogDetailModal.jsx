@@ -7,6 +7,7 @@ import "./BlogDetailModal.css";
 
 const BlogDetailModal = () => {
   const [readmore, setReadmore] = useState(false);
+  const [blogUrl, setBlogUrl] = useState("");
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -17,6 +18,11 @@ const BlogDetailModal = () => {
       .get(`https://api.jcloudwork.com/api/blogs/${id}`)
       .then((response) => {
         setBlog(response.data);
+
+        const regex = /uploads\\([a-fA-F0-9]+)$/;
+        const match = response.data.image_url.match(regex);
+
+        setBlogUrl(match[1]);
         setLoading(false);
       })
       .catch((error) => {
@@ -47,7 +53,7 @@ const BlogDetailModal = () => {
                     <div className="blog-detail-img">
                       <h1 className="blog-title">{blog.title}</h1>
                       <img
-                        src={blog.image_url}
+                        src={`https://api.jcloudwork.com//uploads\\${blogUrl}`}
                         alt={blog.title}
                         className="blog-image"
                       />

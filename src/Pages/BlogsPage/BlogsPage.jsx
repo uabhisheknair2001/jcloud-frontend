@@ -107,7 +107,10 @@ function BlogsPage() {
                     </div>
 
                     {blog.image && (
-                      <img src={`/${blog.image}`} alt={blog.title} />
+                      <img
+                        src={`https://api.jcloudwork.com/${blog.image}`}
+                        alt={blog.title}
+                      />
                     )}
                   </div>
                 </Link>
