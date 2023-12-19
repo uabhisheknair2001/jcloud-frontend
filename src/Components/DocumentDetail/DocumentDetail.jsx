@@ -89,7 +89,7 @@ const DocumentDetails = () => {
                   {document.file_floor1 && (
                     <>
                       <img
-                        src={`/${document.file_floor1}`}
+                        src={`https://api.jcloudwork.com/${document.file_floor1}`}
                         alt="Floor 1 Plan"
                       />
                       {/* <div className="text-center">
@@ -102,7 +102,7 @@ const DocumentDetails = () => {
                   {document.file_floor2 && (
                     <>
                       <img
-                        src={`/${document.file_floor2}`}
+                        src={`https://api.jcloudwork.com/${document.file_floor2}`}
                         alt="Floor 2 Plan"
                       />
                       {/* <div className="text-center">
@@ -116,7 +116,7 @@ const DocumentDetails = () => {
                   {document.file_floor3 && (
                     <>
                       <img
-                        src={`/${document.file_floor3}`}
+                        src={`https://api.jcloudwork.com/${document.file_floor3}`}
                         alt="Floor 3 Plan"
                       />
                       {/* <div className="text-center">
@@ -129,7 +129,7 @@ const DocumentDetails = () => {
                   {document.file_floor4 && (
                     <>
                       <img
-                        src={`/${document.file_floor4}`}
+                        src={`https://api.jcloudwork.com/${document.file_floor4}`}
                         alt="Floor 4 Plan"
                       />
                       {/* <div className="text-center">
