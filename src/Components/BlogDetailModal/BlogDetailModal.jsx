@@ -53,7 +53,7 @@ const BlogDetailModal = () => {
                     <div className="blog-detail-img">
                       <h1 className="blog-title">{blog.title}</h1>
                       <img
-                        src={`https://api.jcloudwork.com//uploads\\${blogUrl}`}
+                        src={`https://api.jcloudwork.com/${blogUrl}`}
                         alt={blog.title}
                         className="blog-image"
                       />

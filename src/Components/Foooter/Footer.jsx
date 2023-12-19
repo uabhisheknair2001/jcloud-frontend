@@ -132,7 +132,7 @@ function Footer() {
                       </p>
                       <p>
                         <Link to="/documentlist" className="FooterLink">
-                          Document
+                          Plans
                         </Link>
                       </p>
                       <p>
@@ -143,7 +143,7 @@ function Footer() {
                       </p>
                       <p>
                         <Link to="/job-listing" className="FooterLink">
-                          joblisting
+                          jobs
                         </Link>
                       </p>
                       <p>
@@ -167,7 +167,7 @@ function Footer() {
                         </Link>
                       </p>
                       <p>
-                        <Link to="/login" className="FooterLink">
+                        <Link to="/admin-console" className="FooterLink">
                           Login
                         </Link>
                       </p>

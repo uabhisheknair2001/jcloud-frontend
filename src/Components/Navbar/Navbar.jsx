@@ -129,11 +129,11 @@ const Navbar = () => {
             </li>
             <li className="navbar-items">
               <Link
-                to="/courses"
+                to="/blogs"
                 className="nav-link"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Courses
+                Blogs
               </Link>
             </li>
             <li className="navbar-items">
@@ -142,7 +142,25 @@ const Navbar = () => {
                 className="nav-link"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Document
+                Plans
+              </Link>
+            </li>
+            <li className="navbar-items">
+              <Link
+                to="/library"
+                className="nav-link"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Library
+              </Link>
+            </li>
+            <li className="navbar-items">
+              <Link
+                to="/job-listing"
+                className="nav-link"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Jobs
               </Link>
             </li>
             <li className="navbar-items">
