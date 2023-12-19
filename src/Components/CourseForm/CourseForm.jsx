@@ -59,7 +59,7 @@ const CourseForm = () => {
     try {
       // Make a POST request to your server to add the course with the thumbnail
       const response = await axios.post(
-        `/api/add-course`,
+        `https://api.jcloudwork.com/api/add-course`,
         formData
       );
 

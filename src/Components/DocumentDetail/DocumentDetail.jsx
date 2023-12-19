@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import './DocumentDetail.css'
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import "./DocumentDetail.css";
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 // import './Testmonial.css'
 import {
   Navigation,
@@ -14,40 +14,42 @@ import {
   Mousewheel,
   Keyboard,
   Autoplay,
-} from 'swiper/modules'
+} from "swiper/modules";
 
 // import Slider from 'react-slick'
 
 // arrow
 
 const DocumentDetails = () => {
-  const { id } = useParams()
-  const [document, setDocument] = useState()
-  const [error, setError] = useState(null)
+  const { id } = useParams();
+  const [document, setDocument] = useState();
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchDocumentDetails = async () => {
       try {
-        const response = await fetch(`/api/documents/${id}`)
-        const data = await response.json()
+        const response = await fetch(
+          `https://api.jcloudwork.com/api/documents/${id}`
+        );
+        const data = await response.json();
 
         if (response.ok) {
-          setDocument(data)
+          setDocument(data);
         } else {
-          console.error('Error fetching document details:', data)
-          setError('Document not found')
+          console.error("Error fetching document details:", data);
+          setError("Document not found");
         }
       } catch (error) {
-        console.error('Error fetching document details:', error)
-        setError('Internal Server Error')
+        console.error("Error fetching document details:", error);
+        setError("Internal Server Error");
       }
-    }
+    };
 
-    fetchDocumentDetails()
-  }, [id])
+    fetchDocumentDetails();
+  }, [id]);
 
   if (!document) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   return (
@@ -62,7 +64,7 @@ const DocumentDetails = () => {
             <div className=" document_slider">
               <Swiper
                 spaceBetween={30}
-                effect={'fade'}
+                effect={"fade"}
                 navigation={true}
                 mousewheel={true}
                 keyboard={true}
@@ -208,7 +210,7 @@ const DocumentDetails = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DocumentDetails
+export default DocumentDetails;

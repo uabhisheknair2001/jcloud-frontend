@@ -17,7 +17,7 @@ function BlogForm() {
       formData.append("content", content);
 
       const response = await axios.post(
-        `/api/create-blog`,
+        `https://api.jcloudwork.com/api/create-blog`,
         formData,
         {
           headers: {

@@ -1,50 +1,54 @@
 // BlogsPage.js
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom' // Import Link from react-router-dom
-import './BlogsPage.css'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import "./BlogsPage.css";
 
 function BlogsPage() {
-  const [blogs, setBlogs] = useState([])
-  const [searchTerm, setSearchTerm] = useState('')
+  const [blogs, setBlogs] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     // Fetch blogs from the server
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get(`/api/blogs`)
-        setBlogs(response.data)
+        const response = await axios.get(
+          `https://api.jcloudwork.com/api/blogs`
+        );
+        setBlogs(response.data);
       } catch (error) {
-        console.error('Error fetching blogs:', error)
+        console.error("Error fetching blogs:", error);
       }
-    }
+    };
 
-    fetchBlogs()
-  }, [])
+    fetchBlogs();
+  }, []);
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`/api/blogs/search?search=${searchTerm}`)
-      console.log('Blogs searched:', response.data)
-      setBlogs(response.data)
+      const response = await axios.get(
+        `https://api.jcloudwork.com/api/blogs/search?search=${searchTerm}`
+      );
+      console.log("Blogs searched:", response.data);
+      setBlogs(response.data);
     } catch (error) {
-      console.error('Error searching blogs:', error)
+      console.error("Error searching blogs:", error);
     }
-  }
+  };
 
   const handleReset = async () => {
     // Fetch all blogs again
     try {
-      const response = await axios.get(`/api/blogs`)
-      setBlogs(response.data)
+      const response = await axios.get(`https://api.jcloudwork.com/api/blogs`);
+      setBlogs(response.data);
       // Clear the search term
-      setSearchTerm('')
+      setSearchTerm("");
     } catch (error) {
-      console.error('Error fetching blogs:', error)
+      console.error("Error fetching blogs:", error);
     }
-  }
+  };
 
-  console.log(blogs)
+  console.log(blogs);
 
   return (
     // <div>
@@ -113,7 +117,7 @@ function BlogsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default BlogsPage
+export default BlogsPage;

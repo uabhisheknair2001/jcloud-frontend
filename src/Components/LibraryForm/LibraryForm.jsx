@@ -1,76 +1,79 @@
-import React, { useState } from 'react'
-import { toast, ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import './LibraryForm.css'
+import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./LibraryForm.css";
 
 function FeatureForm() {
-  const [title, setTitle] = useState('')
-  const [link, setLink] = useState('')
-  const [image1, setImage1] = useState(null)
-  const [image2, setImage2] = useState(null)
-  const [image3, setImage3] = useState(null)
-  const [image4, setImage4] = useState(null)
+  const [title, setTitle] = useState("");
+  const [link, setLink] = useState("");
+  const [image1, setImage1] = useState(null);
+  const [image2, setImage2] = useState(null);
+  const [image3, setImage3] = useState(null);
+  const [image4, setImage4] = useState(null);
 
   const handleImage1Change = (e) => {
     // Update image1 with the first selected file
-    setImage1(e.target.files[0])
-  }
+    setImage1(e.target.files[0]);
+  };
 
   const handleImage2Change = (e) => {
-    setImage2(e.target.files[0])
-  }
+    setImage2(e.target.files[0]);
+  };
 
   const handleImage3Change = (e) => {
-    setImage3(e.target.files[0])
-  }
+    setImage3(e.target.files[0]);
+  };
 
   const handleImage4Change = (e) => {
-    setImage4(e.target.files[0])
-  }
+    setImage4(e.target.files[0]);
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     // Check if required fields are filled
     if (!title || !link || !image1) {
-      toast.error('Title, Link, and Image 1 are required fields', {
+      toast.error("Title, Link, and Image 1 are required fields", {
         autoClose: 3000,
-      })
-      return
+      });
+      return;
     }
 
-    const formData = new FormData()
-    formData.append('title', title)
-    formData.append('link', link)
-    formData.append('image1', image1)
-    formData.append('image2', image2)
-    formData.append('image3', image3)
-    formData.append('image4', image4)
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("link", link);
+    formData.append("image1", image1);
+    formData.append("image2", image2);
+    formData.append("image3", image3);
+    formData.append("image4", image4);
 
     try {
-      const response = await fetch('/api/upload-feature', {
-        method: 'POST',
-        body: formData,
-      })
+      const response = await fetch(
+        "https://api.jcloudwork.com/api/upload-feature",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       if (response.ok) {
-        toast.success('Feature added successfully', { autoClose: 3000 })
+        toast.success("Feature added successfully", { autoClose: 3000 });
         // Resetting form fields
-        setTitle('')
-        setLink('')
-        setImage1(null)
-        setImage2(null)
-        setImage3(null)
-        setImage4(null)
+        setTitle("");
+        setLink("");
+        setImage1(null);
+        setImage2(null);
+        setImage3(null);
+        setImage4(null);
       } else {
-        console.error('Feature upload failed with status:', response.status)
-        toast.error('Feature upload failed', { autoClose: 3000 })
+        console.error("Feature upload failed with status:", response.status);
+        toast.error("Feature upload failed", { autoClose: 3000 });
       }
     } catch (error) {
-      console.error('Error uploading feature:', error)
-      toast.error('Error uploading feature', { autoClose: 3000 })
+      console.error("Error uploading feature:", error);
+      toast.error("Error uploading feature", { autoClose: 3000 });
     }
-  }
+  };
 
   return (
     // <div className="feature-form">
@@ -158,7 +161,7 @@ function FeatureForm() {
         <ToastContainer />
       </div>
     </div>
-  )
+  );
 }
 
-export default FeatureForm
+export default FeatureForm;

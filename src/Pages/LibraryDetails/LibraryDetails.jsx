@@ -1,33 +1,33 @@
 // FeatureDetail.js
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import './LibraryDetails.css'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import "./LibraryDetails.css";
 
 function FeatureDetail() {
-  const { id } = useParams()
-  const [feature, setFeature] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const { id } = useParams();
+  const [feature, setFeature] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Fetch the specific feature by ID from the server
-    fetch(`/api/get-feature/${id}`)
+    fetch(`https://api.jcloudwork.com/api/get-feature/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        setFeature(data)
-        setLoading(false)
+        setFeature(data);
+        setLoading(false);
       })
       .catch((error) => {
-        console.error('Error fetching feature details:', error)
-        setLoading(false)
-      })
-  }, [id])
+        console.error("Error fetching feature details:", error);
+        setLoading(false);
+      });
+  }, [id]);
 
   if (loading) {
-    return <div className="feature-detail-loading">Loading...</div>
+    return <div className="feature-detail-loading">Loading...</div>;
   }
 
   if (!feature) {
-    return <div className="feature-detail-not-found">Feature not found</div>
+    return <div className="feature-detail-not-found">Feature not found</div>;
   }
 
   return (
@@ -78,13 +78,13 @@ function FeatureDetail() {
                     </a>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default FeatureDetail
+export default FeatureDetail;

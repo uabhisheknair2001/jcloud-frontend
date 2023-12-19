@@ -1,28 +1,30 @@
 // JobListingsPage.js
-import React, { useState, useEffect } from 'react'
-import './JobListingsPage.css'
+import React, { useState, useEffect } from "react";
+import "./JobListingsPage.css";
 
 const JobListingsPage = () => {
-  const [jobListings, setJobListings] = useState([])
+  const [jobListings, setJobListings] = useState([]);
 
   useEffect(() => {
     // Fetch job listings from the server
     const fetchJobListings = async () => {
       try {
-        const response = await fetch('/get-job-listings')
+        const response = await fetch(
+          "https://api.jcloudwork.com/get-job-listings"
+        );
         if (response.ok) {
-          const data = await response.json()
-          setJobListings(data)
+          const data = await response.json();
+          setJobListings(data);
         } else {
-          console.error('Error fetching job listings:', response.statusText)
+          console.error("Error fetching job listings:", response.statusText);
         }
       } catch (error) {
-        console.error('Error fetching job listings:', error.message)
+        console.error("Error fetching job listings:", error.message);
       }
-    }
+    };
 
-    fetchJobListings()
-  }, [])
+    fetchJobListings();
+  }, []);
 
   return (
     // <div className="job-listings-container">
@@ -74,19 +76,19 @@ const JobListingsPage = () => {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 // Helper function to format the date
 const formatDate = (dateString) => {
-  const options = { day: 'numeric', month: 'numeric', year: '2-digit' }
-  const date = new Date(dateString)
-  return date.toLocaleDateString('en-GB', options)
-}
+  const options = { day: "numeric", month: "numeric", year: "2-digit" };
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-GB", options);
+};
 
-export default JobListingsPage
+export default JobListingsPage;
