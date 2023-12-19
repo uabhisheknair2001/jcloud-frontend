@@ -1,36 +1,39 @@
-import React, { useState } from 'react'
-import axios from 'axios'
-import './Login.css'
-import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from "react";
+import axios from "axios";
+import "./Login.css";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
-  const [isLoading, setIsLoading] = useState(false) // New state for loading indicator
-  const navigate = useNavigate()
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // New state for loading indicator
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
-    setIsLoading(true) // Show loading indicator
+    setIsLoading(true); // Show loading indicator
 
     try {
-      const response = await axios.post('/api/login', {
-        username,
-        password,
-      })
+      const response = await axios.post(
+        "https://api.jcloudwork.com/api/login",
+        {
+          username,
+          password,
+        }
+      );
 
       if (response.data.success) {
-        navigate('/')
+        navigate("/");
       } else {
-        setError(response.data.message)
+        setError(response.data.message);
       }
     } catch (error) {
-      setError('Login error. Please try again.')
+      setError("Login error. Please try again.");
     }
 
-    setIsLoading(false)
-  }
+    setIsLoading(false);
+  };
 
   return (
     // <div>
@@ -112,7 +115,7 @@ function Login() {
                       onClick={handleLogin}
                       disabled={isLoading}
                     >
-                      {isLoading ? 'Logging in...' : 'Login'}
+                      {isLoading ? "Logging in..." : "Login"}
                     </button>
                   </div>
 
@@ -128,12 +131,12 @@ function Login() {
                 </p>
               </div>
             </div>
-            {isLoading && <div className="loading-indicator">Loading...</div>}{' '}
+            {isLoading && <div className="loading-indicator">Loading...</div>}{" "}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

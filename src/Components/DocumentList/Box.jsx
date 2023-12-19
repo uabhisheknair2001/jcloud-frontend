@@ -1,42 +1,42 @@
 // Box.jsx
 
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import defaultImage from '../../Assets/image.jpg'
-import { BsFillPrinterFill } from 'react-icons/bs'
-import { HiOutlineMagnifyingGlass } from 'react-icons/hi2'
-import { IoEyeOutline } from 'react-icons/io5'
-import './Box.css'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import defaultImage from "../../Assets/image.jpg";
+import { BsFillPrinterFill } from "react-icons/bs";
+import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
+import { IoEyeOutline } from "react-icons/io5";
+import "./Box.css";
 
 const Box = ({ projectDetails }) => {
-  const [showImageModal, setShowImageModal] = useState(false)
-  const [enlargedImage, setEnlargedImage] = useState(null)
+  const [showImageModal, setShowImageModal] = useState(false);
+  const [enlargedImage, setEnlargedImage] = useState(null);
 
   // Initialize the navigate hook
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const openImageModal = (imagePath) => {
-    console.log('Image Path: ', imagePath)
-    setEnlargedImage(imagePath)
-    setShowImageModal(true)
-  }
+    console.log("Image Path: ", imagePath);
+    setEnlargedImage(imagePath);
+    setShowImageModal(true);
+  };
 
   const closeImageModal = () => {
-    setEnlargedImage(null)
-    setShowImageModal(false)
-  }
+    setEnlargedImage(null);
+    setShowImageModal(false);
+  };
 
   const handlePrint = () => {
-    window.print()
-  }
+    window.print();
+  };
 
   const openDocumentDetails = () => {
-    const documentDetailsLink = `/documents/${projectDetails.id}`
+    const documentDetailsLink = `/documents/${projectDetails.id}`;
     // Use the navigate hook to programmatically navigate
-    navigate(documentDetailsLink)
-  }
+    navigate(documentDetailsLink);
+  };
 
-  console.log(projectDetails.file_2d)
+  console.log(projectDetails.file_2d);
 
   return (
     <div className="Project_card">
@@ -44,7 +44,10 @@ const Box = ({ projectDetails }) => {
         <img
           className="object-cover object-center w-full h-60  cursor-pointer"
           alt={projectDetails.file_2d || defaultImage}
-          src={`/${projectDetails.file_2d}` || defaultImage}
+          src={
+            `https://api.jcloudwork.com/${projectDetails.file_2d}` ||
+            defaultImage
+          }
           onClick={() => openImageModal(projectDetails.file_2d || defaultImage)}
         />
         <div className="card-body">
@@ -99,7 +102,7 @@ const Box = ({ projectDetails }) => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Box
+export default Box;

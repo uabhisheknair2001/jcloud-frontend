@@ -27,7 +27,7 @@ const CoursesPage = () => {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/courses`
+          `https://api.jcloudwork.com/api/courses`
         );
         setCourses(response.data);
         setFilteredCourses(response.data); // Initialize filteredCourses with all courses
@@ -47,6 +47,7 @@ const CoursesPage = () => {
     setFilteredCourses(filtered);
   }, [filter, courses]);
 
+  console.log(courses);
   return (
     <div>
       <div className="courses-page">
@@ -71,8 +72,8 @@ const CoursesPage = () => {
               <div className="course-card">
                 {/* Display thumbnail image */}
                 <img
-                  src={`${process.env.REACT_APP_API_ROUTE_URL}/${course.thumbnail}`}
-                  alt={course.title}
+                  src={`https://api.jcloudwork.com/${course.thumbnail}`}
+                  alt={course.thumbnail}
                   className="course-thumbnail"
                 />
 

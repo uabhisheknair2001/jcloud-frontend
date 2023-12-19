@@ -11,10 +11,10 @@ const BlogDetailModal = () => {
   const [loading, setLoading] = useState(true);
 
   const { id } = useParams();
- 
+
   useEffect(() => {
     axios
-      .get(`/api/blogs/${id}`)
+      .get(`https://api.jcloudwork.com/api/blogs/${id}`)
       .then((response) => {
         setBlog(response.data);
         setLoading(false);

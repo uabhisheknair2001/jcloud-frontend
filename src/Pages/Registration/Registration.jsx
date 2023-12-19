@@ -1,33 +1,36 @@
-import React, { useState } from 'react'
-import axios from '../../api/axios'
-import './Registration.css'
-import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from "react";
+import axios from "../../api/axios";
+import "./Registration.css";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Registration() {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [isRegistered, setIsRegistered] = useState(false)
-  const navigate = useNavigate() // Use the useNavigate hook
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [isRegistered, setIsRegistered] = useState(false);
+  const navigate = useNavigate(); // Use the useNavigate hook
 
   const handleRegistration = async () => {
     try {
-      const response = await axios.post('/api/register', {
-        username,
-        password,
-      })
+      const response = await axios.post(
+        "https://api.jcloudwork.com/api/register",
+        {
+          username,
+          password,
+        }
+      );
       if (response.data.success) {
-        setIsRegistered(true)
+        setIsRegistered(true);
 
         // Redirect after 3 seconds
         setTimeout(() => {
-          navigate('/')
-        }, 3000)
+          navigate("/");
+        }, 3000);
       }
     } catch (error) {
-      console.error('Registration failed', error)
+      console.error("Registration failed", error);
     }
-  }
+  };
 
   return (
     // <div>
@@ -124,7 +127,7 @@ function Registration() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Registration
+export default Registration;

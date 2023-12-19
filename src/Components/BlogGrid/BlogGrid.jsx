@@ -10,7 +10,7 @@ const BlogGrid = () => {
 
   useEffect(() => {
     axios
-      .get(`/api/blogs`)
+      .get(`https://api.jcloudwork.com/api/blogs`)
       .then((response) => {
         setBlogs(response.data);
       })
@@ -38,7 +38,10 @@ const BlogGrid = () => {
             >
               <div className="card blog-card">
                 <div className="card-body">
-                  <img src={blog.image} alt={blog.title} />
+                  <img
+                    src={`https://api.jcloudwork.com/${blog.image}`}
+                    alt={blog.title}
+                  />
                   <h5>{blog.title}</h5>
                   <Link to={`/blog/${blog.id}`} className="read-more-button">
                     Read More

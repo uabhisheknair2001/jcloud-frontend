@@ -56,13 +56,16 @@ const CertificateForm = () => {
     }
 
     try {
-      const response = await fetch("/api/submit-certificate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://api.jcloudwork.com/api/submit-certificate",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       console.log("Response Status:", response.status);
 
@@ -128,13 +131,15 @@ const CertificateForm = () => {
           <label>
             Domain:
             <div className="select-container">
-              <div
-                className="select-button"
-                onClick={handleDropdownToggle}
-              >
+              <div className="select-button" onClick={handleDropdownToggle}>
                 {formData.domain}
                 <div className={`select-options ${isActive ? "active" : ""}`}>
-                  {["Civil/Architecture/Interior", "Mechanical", "Electrical", "IT"].map((domain) => (
+                  {[
+                    "Civil/Architecture/Interior",
+                    "Mechanical",
+                    "Electrical",
+                    "IT",
+                  ].map((domain) => (
                     <div
                       key={domain}
                       className="select-option"
