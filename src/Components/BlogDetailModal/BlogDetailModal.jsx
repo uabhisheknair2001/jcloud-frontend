@@ -22,7 +22,7 @@ const BlogDetailModal = () => {
         const regex = /uploads\\([a-fA-F0-9]+)$/;
         const match = response.data.image_url.match(regex);
 
-        setBlogUrl(match[1]);
+        setBlogUrl(match[0]);
         setLoading(false);
       })
       .catch((error) => {
@@ -53,7 +53,7 @@ const BlogDetailModal = () => {
                     <div className="blog-detail-img">
                       <h1 className="blog-title">{blog.title}</h1>
                       <img
-                        src={`https://api.jcloudwork.com//uploads\\${blogUrl}`}
+                        src={`https://api.jcloudwork.com/${blogUrl}`}
                         alt={blog.title}
                         className="blog-image"
                       />
