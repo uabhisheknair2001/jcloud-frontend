@@ -1,58 +1,64 @@
 // JobListingForm.js
-import React, { useState } from 'react'
-import './JobListingForm.css'
+import React, { useState } from "react";
+import "./JobListingForm.css";
 
 const JobListingForm = () => {
-  const [jobTitle, setJobTitle] = useState('')
-  const [companyName, setCompanyName] = useState('')
-  const [jobDescription, setJobDescription] = useState('')
-  const [requirements, setRequirements] = useState('')
-  const [location, setLocation] = useState('')
-  const [employmentType, setEmploymentType] = useState('')
-  const [domain, setDomain] = useState('')
-  const [position, setPosition] = useState('')
-  const [salary, setSalary] = useState('')
-  const [applicationDeadline, setApplicationDeadline] = useState('')
-  const [contactEmail, setContactEmail] = useState('')
-  const [contactPhone, setContactPhone] = useState('')
-  const [applicationInstructions, setApplicationInstructions] = useState('')
+  const [jobTitle, setJobTitle] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [jobDescription, setJobDescription] = useState("");
+  const [requirements, setRequirements] = useState("");
+  const [location, setLocation] = useState("");
+  const [employmentType, setEmploymentType] = useState("");
+  const [domain, setDomain] = useState("");
+  const [position, setPosition] = useState("");
+  const [salary, setSalary] = useState("");
+  const [applicationDeadline, setApplicationDeadline] = useState("");
+  const [contactEmail, setContactEmail] = useState("");
+  const [contactPhone, setContactPhone] = useState("");
+  const [applicationInstructions, setApplicationInstructions] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     try {
-      const response = await fetch('/submit-job-listing', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          jobTitle,
-          companyName,
-          jobDescription,
-          requirements,
-          location,
-          employmentType,
-          domain,
-          position,
-          salary,
-          applicationDeadline,
-          contactEmail,
-          contactPhone,
-          applicationInstructions,
-        }),
-      })
+      const response = await fetch(
+        "https://api.jcloudwork.com/api/submit-job-listing",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            jobTitle,
+            companyName,
+            jobDescription,
+            requirements,
+            location,
+            employmentType,
+            domain,
+            position,
+            salary,
+            applicationDeadline,
+            contactEmail,
+            contactPhone,
+            applicationInstructions,
+          }),
+        }
+      );
 
       if (response.ok) {
-        console.log('Job Listing Form Submitted successfully')
+        console.log("Job Listing Form Submitted successfully");
         // Reset form fields or perform any other actions on successful submission
       } else {
-        console.error('Error submitting job listing form:', response.statusText)
+        console.error(
+          "Error submitting job listing form:",
+          response.statusText
+        );
       }
     } catch (error) {
-      console.error('Error submitting job listing form:', error.message)
+      console.error("Error submitting job listing form:", error.message);
     }
-  }
+  };
 
   return (
     // <form onSubmit={handleSubmit}>
@@ -320,7 +326,7 @@ const JobListingForm = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default JobListingForm
+export default JobListingForm;

@@ -22,7 +22,7 @@ const BlogDetailModal = () => {
         const regex = /uploads\\([a-fA-F0-9]+)$/;
         const match = response.data.image_url.match(regex);
 
-        setBlogUrl(match[1]);
+        setBlogUrl(match[0]);
         setLoading(false);
       })
       .catch((error) => {
